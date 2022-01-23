@@ -1,7 +1,7 @@
 # i3wm
 
 .config/
-|-- i3
+|-- i3 
 |   `-- config
 |-- picom
 |   `-- picom.conf
