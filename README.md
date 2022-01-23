@@ -1,10 +1,10 @@
 # i3wm
 
-.config/
-|-- i3 
-|   `-- config
-|-- picom
-|   `-- picom.conf
-|-- polybar
-|   |-- config
-|   `-- launch.sh
+.config/ <br/>  
+|-- i3  <br/> 
+|   `-- config <br/> 
+|-- picom <br/>  
+|   `-- picom.conf <br/> 
+|-- polybar <br/> 
+|   |-- config <br/> 
+|   `-- launch.sh <br/> 
