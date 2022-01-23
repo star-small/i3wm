@@ -3,7 +3,7 @@
 .config/ <br/>  
 |--- i3  <br/> 
 |------ config <br/> 
-|--- picom <br/>  
+|--- picom
 |------ picom.conf <br/> 
 |--- polybar <br/> 
 |------ config <br/> 
