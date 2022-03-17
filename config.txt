@@ -9,12 +9,17 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+
 gaps inner 5
-gaps outer 5
-border_radius 7
-smart_borders on
-for_window [class=".*"] border pixel 0 #*
+gaps outer 0
+#border_radius 0
+#smart_borders on
+for_window [class=".*"] border pixel 2 #*
 set $mod Mod1
+
+
+client.focused          #c94730 #c94730 #c94730 #c94730 #c94730
+client.unfocused        #8a2f2d #8a2f2d #8a2f2d #8a2f2d #8a2f2d 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -113,6 +118,12 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+
+#scripts
+#exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/troy/.i3/workspace-1.json'"
+
+
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -149,6 +160,9 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -171,10 +185,10 @@ mode "resize" {
         bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 2 px or 2 ppt
+        bindsym Down resize grow height 2 px or 2 ppt
+        bindsym Up resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow width 2 px or 2 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -188,7 +202,11 @@ bindsym $mod+r mode "resize"
 # find out, if available)
 
 exec_always --no-startup-id /home/troy/.config/polybar/launch.sh
-exec_always feh --bg-scale ~/Pictures/1614719409_22-p-foni-dlya-artov-24.jpg
+exec --no-startup-id yakuake
+exec_always feh --bg-scale /home/troy/Pictures/wallpaper/mars4.jpg
+exec "glava --desktop -a pulseaudio"
+exec --no-startup-id parcellite
+exec "conky --config ~/.conkyrc"
 bindsym Print exec --no-startup-id spectacle
 exec_always "setxkbmap -model pc105 -layout us,ru"
 exec_always "setxkbmap -option 'grp:win_space_toggle'"
