@@ -8,10 +8,10 @@
 |--- polybar <br/> 
 |------ config <br/> 
 |------ launch.sh <br/> 
-|--- conky
-|------ conky.conf
-|--- glava
-|------ bars.glsl
-|------ rc.glsl
-|--- kitty
-|------ kitty.conf
+|--- conky <br/> 
+|------ conky.conf <br/> 
+|--- glava <br/> 
+|------ bars.glsl <br/> 
+|------ rc.glsl <br/> 
+|--- kitty <br/> 
+|------ kitty.conf <br/> 
