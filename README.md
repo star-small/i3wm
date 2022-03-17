@@ -13,3 +13,5 @@
 |--- glava
 |------ bars.glsl
 |------ rc.glsl
+|--- kitty
+|------ kitty.conf
